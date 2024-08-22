@@ -1,15 +1,20 @@
-import React, { Component } from "react";
 import "./Buttons.css";
 
-export default class Buttons extends Component {
-  render() {
-    return (
+import React from "react";
+
+export default function Buttons(props) {
+  return (
+    <div>
       <div>
         <div className="flex gap-8 justify-center">
-          <button className="">Add</button>
-          <button className="">Lower</button>
+          <button className="" onClick={props.increase}>
+            Add
+          </button>
+          <button className="" onClick={props.decrease}>
+            Lower
+          </button>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
